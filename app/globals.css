@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 96%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
+  /* Noir theme - dark purple black */
+  .noir {
+    --background: 270 5% 95%;
+    --foreground: 270 5% 10%;
+
+    --card: 270 10% 98%;
+    --card-foreground: 270 5% 10%;
+
+    --popover: 270 10% 98%;
+    --popover-foreground: 270 5% 10%;
+
+    --primary: 270 70% 50%;
+    --primary-foreground: 270 5% 95%;
+
+    --secondary: 270 10% 90%;
+    --secondary-foreground: 270 5% 10%;
+
+    --muted: 270 10% 90%;
+    --muted-foreground: 270 5% 40%;
+
+    --accent: 270 20% 90%;
+    --accent-foreground: 270 5% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 270 5% 95%;
+
+    --border: 270 10% 85%;
+    --input: 270 10% 85%;
+    --ring: 270 70% 50%;
+  }
+
+  .noir-dark {
+    --background: 270 5% 10%;
+    --foreground: 270 5% 95%;
+
+    --card: 270 5% 15%;
+    --card-foreground: 270 5% 95%;
+
+    --popover: 270 5% 15%;
+    --popover-foreground: 270 5% 95%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 270 5% 95%;
+
+    --secondary: 270 5% 20%;
+    --secondary-foreground: 270 5% 95%;
+
+    --muted: 270 5% 20%;
+    --muted-foreground: 270 5% 70%;
+
+    --accent: 270 20% 30%;
+    --accent-foreground: 270 5% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 270 5% 95%;
+
+    --border: 270 5% 25%;
+    --input: 270 5% 25%;
+    --ring: 270 70% 60%;
+  }
+
+  /* Grass theme - matcha green */
+  .grass {
+    --background: 120 15% 95%;
+    --foreground: 120 20% 15%;
+
+    --card: 120 15% 100%;
+    --card-foreground: 120 20% 15%;
+
+    --popover: 120 15% 100%;
+    --popover-foreground: 120 20% 15%;
+
+    --primary: 120 40% 40%;
+    --primary-foreground: 120 15% 95%;
+
+    --secondary: 120 15% 90%;
+    --secondary-foreground: 120 20% 15%;
+
+    --muted: 120 15% 90%;
+    --muted-foreground: 120 20% 35%;
+
+    --accent: 120 10% 85%;
+    --accent-foreground: 120 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 120 15% 95%;
+
+    --border: 120 15% 85%;
+    --input: 120 15% 85%;
+    --ring: 120 40% 40%;
+  }
+
+  .grass-dark {
+    --background: 120 15% 15%;
+    --foreground: 120 15% 95%;
+
+    --card: 120 15% 20%;
+    --card-foreground: 120 15% 95%;
+
+    --popover: 120 15% 20%;
+    --popover-foreground: 120 15% 95%;
+
+    --primary: 120 40% 40%;
+    --primary-foreground: 120 15% 95%;
+
+    --secondary: 120 15% 25%;
+    --secondary-foreground: 120 15% 95%;
+
+    --muted: 120 15% 25%;
+    --muted-foreground: 120 15% 70%;
+
+    --accent: 120 10% 30%;
+    --accent-foreground: 120 15% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 120 15% 95%;
+
+    --border: 120 15% 30%;
+    --input: 120 15% 30%;
+    --ring: 120 40% 40%;
+  }
+
+  /* Ochre theme - yellow orange */
+  .ochre {
+    --background: 40 50% 95%;
+    --foreground: 40 50% 15%;
+
+    --card: 40 50% 100%;
+    --card-foreground: 40 50% 15%;
+
+    --popover: 40 50% 100%;
+    --popover-foreground: 40 50% 15%;
+
+    --primary: 40 90% 50%;
+    --primary-foreground: 40 50% 95%;
+
+    --secondary: 40 50% 90%;
+    --secondary-foreground: 40 50% 15%;
+
+    --muted: 40 50% 90%;
+    --muted-foreground: 40 50% 35%;
+
+    --accent: 40 20% 85%;
+    --accent-foreground: 40 50% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 50% 95%;
+
+    --border: 40 50% 85%;
+    --input: 40 50% 85%;
+    --ring: 40 90% 50%;
+  }
+
+  .ochre-dark {
+    --background: 40 30% 15%;
+    --foreground: 40 30% 95%;
+
+    --card: 40 30% 20%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 40 30% 20%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 40 90% 50%;
+    --primary-foreground: 40 30% 95%;
+
+    --secondary: 40 30% 25%;
+    --secondary-foreground: 40 30% 95%;
+
+    --muted: 40 30% 25%;
+    --muted-foreground: 40 30% 70%;
+
+    --accent: 40 20% 30%;
+    --accent-foreground: 40 30% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 30% 95%;
+
+    --border: 40 30% 30%;
+    --input: 40 30% 30%;
+    --ring: 40 90% 50%;
+  }
+
+  /* Flow theme - blue */
+  .flow {
+    --background: 210 50% 95%;
+    --foreground: 210 50% 15%;
+
+    --card: 210 50% 100%;
+    --card-foreground: 210 50% 15%;
+
+    --popover: 210 50% 100%;
+    --popover-foreground: 210 50% 15%;
+
+    --primary: 210 90% 50%;
+    --primary-foreground: 210 50% 95%;
+
+    --secondary: 210 50% 90%;
+    --secondary-foreground: 210 50% 15%;
+
+    --muted: 210 50% 90%;
+    --muted-foreground: 210 50% 35%;
+
+    --accent: 210 20% 85%;
+    --accent-foreground: 210 50% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 50% 95%;
+
+    --border: 210 50% 85%;
+    --input: 210 50% 85%;
+    --ring: 210 90% 50%;
+  }
+
+  .flow-dark {
+    --background: 210 30% 15%;
+    --foreground: 210 30% 95%;
+
+    --card: 210 30% 20%;
+    --card-foreground: 210 30% 95%;
+
+    --popover: 210 30% 20%;
+    --popover-foreground: 210 30% 95%;
+
+    --primary: 210 90% 50%;
+    --primary-foreground: 210 30% 95%;
+
+    --secondary: 210 30% 25%;
+    --secondary-foreground: 210 30% 95%;
+
+    --muted: 210 30% 25%;
+    --muted-foreground: 210 30% 70%;
+
+    --accent: 210 20% 30%;
+    --accent-foreground: 210 30% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 30% 95%;
+
+    --border: 210 30% 30%;
+    --input: 210 30% 30%;
+    --ring: 210 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Remove borders when editing */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Utility class for horizontal scrolling with hidden scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add animation for kanban transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.kanban-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Add a crossfade animation for kanban transitions */
+@keyframes crossfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.kanban-transition {
+  animation: crossfade 0.3s ease-in-out;
+}
+
+/* Add animations for task additions and deletions */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.task-enter {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.task-exit {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+/* Remove all shadows */
+.column-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.column-hover:hover {
+  box-shadow: none;
+}
+
+/* Add styles for task text wrapping */
+.task-title {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Add styles for search bar */
+input.overflow-x-auto {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Adjust column transitions */
+.column-transition {
+  transition: min-height 0.3s ease, padding-bottom 0.3s ease;
+}
+
